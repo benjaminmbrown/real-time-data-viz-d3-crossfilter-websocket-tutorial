@@ -15,9 +15,8 @@ class WebSocketHandler(websocket.WebSocketHandler):
   def open(self):
     print 'Connection established.'
     #ioloop to wait for 3 seconds before starting to send data
-    ioloop.IOLoop.instance().add_timeout(datetime.       
-    timedelta(seconds=3), self.send_data)
- 
+    ioloop.IOLoop.instance().add_timeout(datetime.timedelta(seconds=3), self.send_data)
+
  #close connection
   def on_close(self):
     print 'Connection closed.'
