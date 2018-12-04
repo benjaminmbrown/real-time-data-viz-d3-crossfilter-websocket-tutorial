@@ -27,6 +27,9 @@ class WebSocketHandler(websocket.WebSocketHandler):
   def on_close(self):
     print ('Connection closed.')
 
+  def check_origin(self, origin):
+    return True
+
   # Our function to send new (random) data for charts
   def send_data(self):
     print ("Sending Data")
